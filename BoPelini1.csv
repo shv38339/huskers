@@ -1,0 +1,95 @@
+"","year","week","abbrvs","conference","o.pts","n.pts","ptdiff","confplay","fbs"
+"1",2008,1,"WMU","Mid-American",24,47,23,"Non-Conference",0
+"2",2008,2,"SJSU","Western Athletic",12,35,23,"Non-Conference",0
+"3",2008,3,"NMSU","Western Athletic",7,38,31,"Non-Conference",0
+"4",2008,4,"VT","Atlantic Coast",35,30,-5,"Non-Conference",1
+"5",2008,5,"MIZZ","Big 12",52,17,-35,"Conference",0
+"6",2008,6,"TTU","Big 12",37,31,-6,"Conference",0
+"7",2008,7,"ISU","Big 12",7,35,28,"Conference",0
+"8",2008,8,"BAY","Big 12",20,32,12,"Conference",0
+"9",2008,9,"OU","Big 12",62,28,-34,"Conference",0
+"10",2008,10,"KU","Big 12",35,45,10,"Conference",0
+"11",2008,11,"KSU","Big 12",28,56,28,"Conference",0
+"12",2008,12,"COL","Big 12",31,40,9,"Conference",0
+"13",2008,13,"CLEM","Atlantic Coast",21,26,5,"Non-Conference",1
+"14",2009,1,"FAU","Sun Belt",3,49,46,"Non-Conference",0
+"15",2009,2,"ARKST","Sun Belt",9,38,29,"Non-Conference",0
+"16",2009,3,"VT","Atlantic Coast",16,15,-1,"Non-Conference",1
+"17",2009,4,"LA-L","Sun Belt",0,55,55,"Non-Conference",0
+"18",2009,5,"MIZZ","Big 12",12,27,15,"Conference",0
+"19",2009,6,"TTU","Big 12",31,10,-21,"Conference",0
+"20",2009,7,"ISU","Big 12",9,7,-2,"Conference",0
+"21",2009,8,"BAY","Big 12",10,20,10,"Conference",0
+"22",2009,9,"OU","Big 12",3,10,7,"Conference",0
+"23",2009,10,"KU","Big 12",17,31,14,"Conference",0
+"24",2009,11,"KSU","Big 12",3,17,14,"Conference",0
+"25",2009,12,"COL","Big 12",20,28,8,"Conference",0
+"26",2009,13,"TEX","Big 12",13,12,-1,"Conference",0
+"27",2009,14,"ARI","Pac-12",0,33,33,"Non-Conference",1
+"28",2010,1,"WKU","Sun Belt",10,49,39,"Non-Conference",0
+"29",2010,2,"ID","Western Athletic",17,38,21,"Non-Conference",0
+"30",2010,3,"WASH","Pac-12",21,56,35,"Non-Conference",1
+"31",2010,4,"SDKSU","FCS",3,17,14,"Non-Conference",0
+"32",2010,5,"KSU","Big 12",13,48,35,"Conference",0
+"33",2010,6,"TEX","Big 12",20,13,-7,"Conference",0
+"34",2010,7,"OKST","Big 12",41,51,10,"Conference",0
+"35",2010,8,"MIZZ","Big 12",17,31,14,"Conference",0
+"36",2010,9,"ISU","Big 12",30,31,1,"Conference",0
+"37",2010,10,"KU","Big 12",3,20,17,"Conference",0
+"38",2010,11,"TAMU","Big 12",9,6,-3,"Conference",0
+"39",2010,12,"COL","Big 12",17,45,28,"Conference",0
+"40",2010,13,"OU","Big 12",23,20,-3,"Conference",0
+"41",2010,14,"WASH","Pac-12",19,7,-12,"Non-Conference",1
+"42",2011,1,"CHATT","FCS",7,40,33,"Non-Conference",0
+"43",2011,2,"FRES","Mountain West",29,42,13,"Non-Conference",0
+"44",2011,3,"WASH","Pac-12",38,51,13,"Non-Conference",1
+"45",2011,4,"WYO","Mountain West",14,38,24,"Non-Conference",0
+"46",2011,5,"WIS","Big Ten",48,17,-31,"Conference",0
+"47",2011,6,"OSU","Big Ten",27,34,7,"Conference",0
+"48",2011,7,"MINN","Big Ten",14,41,27,"Conference",0
+"49",2011,8,"MSU","Big Ten",3,24,21,"Conference",0
+"50",2011,9,"NU","Big Ten",28,25,-3,"Conference",0
+"51",2011,10,"PENN","Big Ten",14,17,3,"Conference",0
+"52",2011,11,"MICH","Big Ten",45,17,-28,"Conference",0
+"53",2011,12,"IOWA","Big Ten",7,20,13,"Conference",0
+"54",2011,13,"SC","Southeastern",30,13,-17,"Non-Conference",1
+"55",2012,1,"SO MISS","Conference USA",20,49,29,"Non-Conference",0
+"56",2012,2,"UCLA","Pac-12",36,30,-6,"Non-Conference",1
+"57",2012,3,"ARKST","Sun Belt",13,42,29,"Non-Conference",0
+"58",2012,4,"IDST","FCS",7,73,66,"Non-Conference",0
+"59",2012,5,"WIS","Big Ten",27,30,3,"Conference",0
+"60",2012,6,"OSU","Big Ten",63,38,-25,"Conference",0
+"61",2012,7,"NU","Big Ten",28,29,1,"Conference",0
+"62",2012,8,"MICH","Big Ten",9,23,14,"Conference",0
+"63",2012,9,"MSU","Big Ten",24,28,4,"Conference",0
+"64",2012,10,"PENN","Big Ten",23,32,9,"Conference",0
+"65",2012,11,"MINN","Big Ten",14,38,24,"Conference",0
+"66",2012,12,"IOWA","Big Ten",7,13,6,"Conference",0
+"67",2012,13,"WIS","Big Ten",70,31,-39,"Conference",0
+"68",2012,14,"UGA","Southeastern",45,31,-14,"Non-Conference",1
+"69",2013,1,"WYO","Mountain West",34,37,3,"Non-Conference",0
+"70",2013,2,"SO MISS","Conference USA",13,56,43,"Non-Conference",0
+"71",2013,3,"UCLA","Pac-12",41,21,-20,"Non-Conference",1
+"72",2013,4,"SDKSU","FCS",20,59,39,"Non-Conference",0
+"73",2013,5,"IL","Big Ten",19,39,20,"Conference",0
+"74",2013,6,"PUR","Big Ten",7,44,37,"Conference",0
+"75",2013,7,"MINN","Big Ten",34,23,-11,"Conference",0
+"76",2013,8,"NU","Big Ten",24,27,3,"Conference",0
+"77",2013,9,"MICH","Big Ten",13,17,4,"Conference",0
+"78",2013,10,"MSU","Big Ten",41,28,-13,"Conference",0
+"79",2013,11,"PENN","Big Ten",20,23,3,"Conference",0
+"80",2013,12,"IOWA","Big Ten",38,17,-21,"Conference",0
+"81",2013,13,"UGA","Southeastern",19,24,5,"Non-Conference",1
+"82",2014,1,"FAU","Conference USA",7,55,48,"Non-Conference",0
+"83",2014,2,"MCNST","FCS",24,31,7,"Non-Conference",0
+"84",2014,3,"FRES","Mountain West",19,55,36,"Non-Conference",0
+"85",2014,4,"MIA","Atlantic Coast",31,41,10,"Non-Conference",1
+"86",2014,5,"IL","Big Ten",14,45,31,"Conference",0
+"87",2014,6,"MSU","Big Ten",27,22,-5,"Conference",0
+"88",2014,7,"NU","Big Ten",17,38,21,"Conference",0
+"89",2014,8,"RUT","Big Ten",24,42,18,"Conference",0
+"90",2014,9,"PUR","Big Ten",14,35,21,"Conference",0
+"91",2014,10,"WIS","Big Ten",59,24,-35,"Conference",0
+"92",2014,11,"MINN","Big Ten",28,24,-4,"Conference",0
+"93",2014,12,"IOWA","Big Ten",34,37,3,"Conference",0
+"94",2014,13,"USC","Pac-12",45,42,-3,"Non-Conference",1
