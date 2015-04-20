@@ -1,0 +1,62 @@
+---
+title: "Table"
+author: "Steele H. Valenzuela"
+date: "April 20, 2015"
+output: html_document
+---
+#### What is this file?
+This file is what I used to sort the data in order to create the table at the end of the article. I could have just used the `pelini1` data frame but it's too late for that now.
+
+#### Libraries
+```{r}
+library(dplyr)
+library(googleVis)
+```
+
+#### Start of Table
+```{r nonconference, echo = FALSE}
+pelini.08_10 %>% select(confplay, abbrvs, ptdiff) %>% 
+  filter(confplay == "Non-Conference" & ptdiff > 0) # 12 wins
+pelini.08_10 %>% select(confplay, abbrvs, ptdiff) %>% 
+  filter(confplay == "Non-Conference" & ptdiff < 0) # 3 losses
+pelini.11_14 %>% select(confplay, abbrvs, ptdiff) %>% 
+  filter(confplay == "Non-Conference" & ptdiff > 0) # 15 wins
+pelini.11_14 %>% select(confplay, abbrvs, ptdiff) %>% 
+  filter(confplay == "Non-Conference" & ptdiff < 0) # 3 losses and 1 for USC
+```
+
+```{r conference, echo = FALSE}
+pelini.08_10 %>% select(confplay, abbrvs, ptdiff) %>%
+  filter(confplay == "Conference" & ptdiff > 0) # 17 wins
+pelini.08_10 %>% select(confplay, abbrvs, ptdiff) %>%
+  filter(confplay == "Conference" & ptdiff < 0) # 9 losses
+pelini.11_14 %>% select(confplay, abbrvs, ptdiff) %>%
+  filter(confplay == "Conference" & ptdiff > 0) # 22 wins
+pelini.11_14 %>% select(confplay, abbrvs, ptdiff) %>%
+  filter(confplay == "Conference" & ptdiff < 0) # 12 losses
+```
+
+```{r bowlgames, echo = FALSE}
+# let's eyeball these since I don't know how to pick the last observation of each data set
+# one day...
+# If the data set was bigger, I'd specify which is a bowlgame and which is not but for now, we're fine.
+```
+
+```{r non-conference fbs, echo = FALSE}
+# Need to create a FBS and non-FBS column
+pelini.08_10 %>% select(conference, confplay, ptdiff, fbs) %>% 
+  filter(confplay == "Non-Conference" & fbs == 1)
+# 3-3
+pelini.11_14 %>% select(conference, confplay, ptdiff, fbs) %>% 
+  filter(confplay == "Non-Conference" & fbs == 1)
+# 3-4
+```
+
+```{r non-conference fillers, echo = FALSE}
+pelini.08_10 %>% select(conference, confplay, ptdiff, fbs) %>% 
+  filter(confplay == "Non-Conference" & fbs == 0)
+# 9-0
+pelini.11_14 %>% select(conference, confplay, ptdiff, fbs) %>% 
+  filter(confplay == "Non-Conference" & fbs == 0)
+# 12-0 
+```
