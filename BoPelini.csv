@@ -1,0 +1,95 @@
+game.id,year,week,outcome,conference,abbrvs,name,o.rank,o.pts,n.rank,n.pts
+1,2008,1,W,Mid-American,WMU,Western Michigan,26,24,26,47
+2,2008,2,W,Western Athletic,SJSU,San Jose State,26,12,26,35
+3,2008,3,W,Western Athletic,NMSU,New Mexico State,26,7,26,38
+4,2008,4,L,Atlantic Coast,VT,Virginia Tech,26,35,26,30
+5,2008,5,L,Big 12,MIZZ,Missouri,4,52,26,17
+6,2008,6,L,Big 12,TTU,Texas Tech,7,37,26,31
+7,2008,7,W,Big 12,ISU,Iowa State,26,7,26,35
+8,2008,8,W,Big 12,BAY,Baylor,26,20,26,32
+9,2008,9,L,Big 12,OU,Oklahoma,4,62,26,28
+10,2008,10,W,Big 12,KU,Kansas,26,35,26,45
+11,2008,11,W,Big 12,KSU,Kansas State,26,28,26,56
+12,2008,12,W,Big 12,COL,Colorado ,26,31,26,40
+13,2008,13,W,Atlantic Coast,CLEM,Clemson,26,21,26,26
+14,2009,1,W,Sun Belt,FAU,Florida Atlantic,26,3,24,49
+15,2009,2,W,Sun Belt,ARKST,Arkansas State,26,9,22,38
+16,2009,3,L,Atlantic Coast,VT,Virginia Tech,13,16,19,15
+17,2009,4,W,Sun Belt,LA-L,Louisiana-Lafayette,26,0,25,55
+18,2009,5,W,Big 12,MIZZ,Missouri,24,12,21,27
+19,2009,6,L,Big 12,TTU,Texas Tech,26,31,15,10
+20,2009,7,L,Big 12,ISU,Iowa State,26,9,26,7
+21,2009,8,W,Big 12,BAY,Baylor,26,10,26,20
+22,2009,9,W,Big 12,OU,Oklahoma,20,3,26,10
+23,2009,10,W,Big 12,KU,Kansas,26,17,26,31
+24,2009,11,W,Big 12,KSU,Kansas State,26,3,26,17
+25,2009,12,W,Big 12,COL,Colorado ,26,20,26,28
+26,2009,13,L,Big 12,TEX,Texas,3,13,21,12
+27,2009,14,W,Pac-12,ARI,Arizona,22,0,20,33
+28,2010,1,W,Sun Belt,WKU,Western Kentucky,26,10,8,49
+29,2010,2,W,Western Athletic,ID,Idaho,26,17,6,38
+30,2010,3,W,Pac-12,WASH,Washington,26,21,8,56
+31,2010,4,W,FCS,SDKSU,South Dakota State,26,3,6,17
+32,2010,5,W,Big 12,KSU,Kansas State,26,13,7,48
+33,2010,6,L,Big 12,TEX,Texas,26,20,5,13
+34,2010,7,W,Big 12,OKST,Oklahoma State,17,41,14,51
+35,2010,8,W,Big 12,MIZZ,Missouri,7,17,14,31
+36,2010,9,W,Big 12,ISU,Iowa State,26,30,9,31
+37,2010,10,W,Big 12,KU,Kansas,26,3,9,20
+38,2010,11,L,Big 12,TAMU,Texas A&M,18,9,9,6
+39,2010,12,W,Big 12,COL,Colorado ,26,17,16,45
+40,2010,13,L,Big 12,OU,Oklahoma,10,23,13,20
+41,2010,14,L,Pac-12,WASH,Washington,26,19,17,7
+42,2011,1,W,FCS,CHATT,Chattanooga,26,7,10,40
+43,2011,2,W,Mountain West,FRES,Fresno State,26,29,10,42
+44,2011,3,W,Pac-12,WASH,Washington,26,38,11,51
+45,2011,4,W,Mountain West,WYO,Wyoming,26,14,9,38
+46,2011,5,L,Big Ten,WIS,Wisconsin,7,48,8,17
+47,2011,6,W,Big Ten,OSU,Ohio State,26,27,14,34
+48,2011,7,W,Big Ten,MINN,Minnesota,26,14,13,41
+49,2011,8,W,Big Ten,MSU,Michigan State,9,3,13,24
+50,2011,9,L,Big Ten,NU,Northwestern,26,28,9,25
+51,2011,10,W,Big Ten,PENN,Penn State,12,14,19,17
+52,2011,11,L,Big Ten,MICH,Michigan,20,45,17,17
+53,2011,12,W,Big Ten,IOWA,Iowa,26,7,22,20
+54,2011,13,L,Southeastern,SC,South Carolina,10,30,21,13
+55,2012,1,W,Conference USA,SO MISS,Southern Mississippi,26,20,17,49
+56,2012,2,L,Pac-12,UCLA,UCLA,26,36,16,30
+57,2012,3,W,Sun Belt,ARKST,Arkansas State,26,13,26,42
+58,2012,4,W,FCS,IDST,Idaho State,26,7,25,73
+59,2012,5,W,Big Ten,WIS,Wisconsin,26,27,22,30
+60,2012,6,L,Big Ten,OSU,Ohio State,12,63,21,38
+61,2012,7,W,Big Ten,NU,Northwestern,26,28,26,29
+62,2012,8,W,Big Ten,MICH,Michigan,20,9,26,23
+63,2012,9,W,Big Ten,MSU,Michigan State,26,24,21,28
+64,2012,10,W,Big Ten,PENN,Penn State,26,23,18,32
+65,2012,11,W,Big Ten,MINN,Minnesota,26,14,16,38
+66,2012,12,W,Big Ten,IOWA,Iowa,26,7,17,13
+67,2012,13,L,Big Ten,WIS,Wisconsin,26,70,14,31
+68,2012,14,L,Southeastern,UGA,Georgia,6,45,23,31
+69,2013,1,W,Mountain West,WYO,Wyoming,26,34,18,37
+70,2013,2,W,Conference USA,SO MISS,Southern Mississippi,26,13,22,56
+71,2013,3,L,Pac-12,UCLA,UCLA,16,41,23,21
+72,2013,4,W,FCS,SDKSU,South Dakota State,26,20,26,59
+73,2013,5,W,Big Ten,IL,Illinois,26,19,26,39
+74,2013,6,W,Big Ten,PUR,Purdue,26,7,26,44
+75,2013,7,L,Big Ten,MINN,Minnesota,26,34,25,23
+76,2013,8,W,Big Ten,NU,Northwestern,26,24,26,27
+77,2013,9,W,Big Ten,MICH,Michigan,26,13,26,17
+78,2013,10,L,Big Ten,MSU,Michigan State,14,41,26,28
+79,2013,11,W,Big Ten,PENN,Penn State,26,20,26,23
+80,2013,12,L,Big Ten,IOWA,Iowa,26,38,26,17
+81,2013,13,W,Southeastern,UGA,Georgia,23,19,26,24
+82,2014,1,W,Conference USA,FAU,Florida Atlantic,26,7,22,55
+83,2014,2,W,FCS,MCNST,McNeese State,26,24,19,31
+84,2014,3,W,Mountain West,FRES,Fresno State,26,19,26,55
+85,2014,4,W,Atlantic Coast,MIA,Miami FL,26,31,24,41
+86,2014,5,W,Big Ten,IL,Illinois,26,14,21,45
+87,2014,6,L,Big Ten,MSU,Michigan State,10,27,19,22
+88,2014,7,W,Big Ten,NU,Northwestern,26,17,19,38
+89,2014,8,W,Big Ten,RUT,Rutgers,26,24,16,42
+90,2014,9,W,Big Ten,PUR,Purdue,26,14,17,35
+91,2014,10,L,Big Ten,WIS,Wisconsin,22,59,11,24
+92,2014,11,L,Big Ten,MINN,Minnesota,26,28,21,24
+93,2014,12,W,Big Ten,IOWA,Iowa,26,34,26,37
+94,2014,13,?,Big Ten,USC,Southern California,24,45,25,42
