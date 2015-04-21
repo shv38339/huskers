@@ -1,0 +1,195 @@
+---
+title: "Bo Pelini, 67-27. Does it tell the whole story?"
+author: "Steele H. Valenzuela"
+date: "April 19, 2015"
+output: html_document
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(dplyr)
+library(googleVis)
+op <- options(gvis.plot.tag='chart')
+
+pelini <- tbl_df(read.csv(file = "BoPelini.csv"))
+
+pelini.08_10 <- pelini %>% filter(year < 2011) %>% 
+                    select(year, week, abbrvs, conference, o.pts, n.pts) %>%
+                    mutate(ptdiff = n.pts - o.pts)
+pelini.08_10$confplay <- ifelse(pelini.08_10$conference == "Big 12", "Conference", "Non-Conference")
+pelini.08_10$fbs <- ifelse(pelini.08_10$conference == "Atlantic Coast", 1, 
+                           ifelse(pelini.08_10$conference == "Pac-12", 1, 0))
+
+pelini.08 <- pelini.08_10 %>% filter(year == 2008)
+pelini.09 <- pelini.08_10 %>% filter(year == 2009)
+pelini.10 <- pelini.08_10 %>% filter(year == 2010)
+
+pelini.11_14 <- pelini %>% filter(year >= 2011) %>% 
+                  select(year, week, abbrvs, conference, o.pts, n.pts) %>%
+                  mutate(ptdiff = n.pts - o.pts)
+pelini.11_14$confplay <- ifelse(pelini.11_14$conference == "Big Ten", "Conference", "Non-Conference")
+pelini.11_14$fbs <- ifelse(pelini.11_14$conference == "Atlantic Coast", 1, 
+                           ifelse(pelini.11_14$conference == "Pac-12", 1, 
+                                  ifelse(pelini.11_14$conference == "Southeastern", 1, 0)))
+
+pelini.11 <- pelini.11_14 %>% filter(year == 2011)
+pelini.12 <- pelini.11_14 %>% filter(year == 2012)
+pelini.13 <- pelini.11_14 %>% filter(year == 2013)
+pelini.14 <- pelini.11_14 %>% filter(year == 2014)
+```
+```{r, echo = FALSE}
+# gvis objects and plots
+
+df.08 <- gvisBubbleChart(pelini.08, idvar = "abbrvs", 
+                         xvar = "week", yvar = "ptdiff", 
+                         colorvar = "confplay", # sizevar = "n.pts", 
+                         options = list(
+                           width = 1000, height = 400,
+                           colors = "['steelblue', 'firebrick']",
+                           hAxis = "{format: 'Game #', 
+                                  ticks: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]}",
+                           hAxis = "{minValue: '0'}", 
+                           vAxes = "[{title: 'Point Differential'}]",
+                           hAxes = "[{title: '2008 Regular Season'}]"))
+
+df.09 <- gvisBubbleChart(pelini.09, idvar = "abbrvs", 
+                         xvar = "week", yvar = "ptdiff", 
+                         colorvar = "confplay", # sizevar = "n.pts", 
+                         options = list(
+                           width = 1000, height = 400,
+                           colors = "['steelblue', 'firebrick']",
+                           hAxis = "{format: 'Game #', 
+                                  ticks: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]}",
+                           hAxis = "{minValue: '0'}", 
+                           vAxes = "[{title: 'Point Differential'}]",
+                           hAxes = "[{title: '2009 Regular Season'}]"))
+
+df.10 <- gvisBubbleChart(pelini.10, idvar = "abbrvs", 
+                         xvar = "week", yvar = "ptdiff", 
+                         colorvar = "confplay", # sizevar = "n.pts", 
+                         options = list(
+                           width = 1000, height = 400,
+                           colors = "['steelblue', 'firebrick']",
+                           hAxis = "{format: 'Game #', 
+                                  ticks: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]}",
+                           hAxis = "{minValue: '0'}", 
+                           vAxes = "[{title: 'Point Differential'}]",
+                           hAxes = "[{title: '2010 Regular Season'}]"))
+
+df.11 <- gvisBubbleChart(pelini.11, idvar = "abbrvs", 
+                         xvar = "week", yvar = "ptdiff", 
+                         colorvar = "confplay", # sizevar = "n.pts", 
+                         options = list(
+                           width = 1000, height = 400,
+                           colors = "['steelblue', 'firebrick']",
+                           hAxis = "{format: 'Game #', 
+                                  ticks: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]}",
+                           hAxis = "{minValue: '0'}", 
+                           vAxes = "[{title: 'Point Differential'}]",
+                           hAxes = "[{title: '2011 Regular Season'}]"))
+
+df.12 <- gvisBubbleChart(pelini.12, idvar = "abbrvs", 
+                         xvar = "week", yvar = "ptdiff", 
+                         colorvar = "confplay", # sizevar = "n.pts", 
+                         options = list(
+                           width = 1000, height = 400,
+                           colors = "['steelblue', 'firebrick']",
+                           hAxis = "{format: 'Game #', 
+                                  ticks: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]}",
+                           hAxis = "{minValue: '0'}", 
+                           vAxes = "[{title: 'Point Differential'}]",
+                           hAxes = "[{title: '2012 Regular Season'}]"))
+
+df.13 <- gvisBubbleChart(pelini.13, idvar = "abbrvs", 
+                         xvar = "week", yvar = "ptdiff", 
+                         colorvar = "confplay", # sizevar = "n.pts", 
+                         options = list(
+                           width = 1000, height = 400,
+                           colors = "['steelblue', 'firebrick']",
+                           hAxis = "{format: 'Game #', 
+                                  ticks: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]}",
+                           hAxis = "{minValue: '0'}", 
+                           vAxes = "[{title: 'Point Differential'}]",
+                           hAxes = "[{title: '2013 Regular Season'}]"))
+
+df.14 <- gvisBubbleChart(pelini.14, idvar = "abbrvs", 
+                         xvar = "week", yvar = "ptdiff", 
+                         colorvar = "confplay", # sizevar = "n.pts", 
+                         options = list(
+                           width = 1000, height = 400,
+                           colors = "['steelblue', 'firebrick']",
+                           hAxis = "{format: 'Game #', 
+                                  ticks: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]}",
+                           hAxis = "{minValue: '0'}", 
+                           vAxes = "[{title: 'Point Differential'}]",
+                           hAxes = "[{title: '2014 Regular Season'}]"))
+```
+
+After the firing of Bo Pelini, ESPN touted the storyline that he went 67-27. Winning almost three-quarters of your games should not get any college football coach fired, but Nebraska's historical precedence of domination requires otherwise.
+
+Silly me for thinking that ESPN did not take a different spin, but indeed they did. According to *[ESPN Stats & Information][id]*, the Huskers went 8-17 vs. AP-ranked teams (3-9 on the road), no BCS bowl appearances, and no conference titles. With the fans, Pelini was just over the threshold of being good enough and we were alright with that, but according to Nebraska's athletic director Shawn Eichorst, that was not good enough.
+
+Although it is easier to share the bigger story, let's examine each of Pelini's seasons highlighting the following metric and category:
+
+  * Point Differential - Above 0 indicates a win and below 0 indicates a loss
+  * Conference and Non-Conference play - straightforward
+  
+I code in the statistical computing language `R`, which has many great packages, such `googleVis`, which has aided me in creating these interactive bubble charts. If you scroll over the team abbreviation, you'll see the **week**, **point differential**, and if the game was in **conference** or **non-conference** play. You may harangue me in the comment section about my choice of visuals, but keep in mind, I tried to keep it *simple*.
+    
+If you'd like to take a look at the data, it's at my [GitHub][id1] repository. I don't think I've made any errors, but hey, that's what you readers are there for. If you see any, shoot me an email or simply fork, pull, and push a request. The article may be repetitive, but I feel that this is absolutely important in determining what Mike Riley must deliver on what Bo Pelini could not.
+
+Now, in Pelini's first season, he went 9-4 overall.  In non-conference play, the Huskers lost a close game to Virginia Tech and won the bowl game against Clemson, going 4-1 in non-conference play. In conference play, the Huskers went 5-3. An acceptable record for a coach's first season.
+```{r, echo = FALSE, results = 'asis'}
+plot(df.08)
+```
+
+In Pelini's second season, the Huskers went 10-4 overall. In non-conference play, the Huskers went 4-1 again, winning their bowl game against Arizona but losing to Virginia Tech for the second year in a row, closing out the series. In conference-play, the Huskers went 5-3, losing to Texas in the conference championship, in a controversial out of bounds play by Colt McCoy. I'm sure I don't need to remind y'all.
+```{r, echo = FALSE, results = 'asis'}
+plot(df.09)
+```
+
+In the third season under Pelini, the Huskers repeat their success and galavant to a 10-4 record. In non-conference play, the Huskers went 4-1, losing their rematch against the Washington Huskies in the bowl game. In conference-play, the Huskers managed to compete for the conference championship for the second year in a row, but fell to Oklahoma, leaving with a 6-3 conference record.
+```{r, echo = FALSE, results = 'asis'}
+plot(df.10)
+```
+
+In the fourth season under Pelini, our inaugural season in the Big Ten, the Huskers went 9-4 overall. Non-conference play yielded a 4-1 record, where the lone loss was delivered from a dominating SEC South Carolina Gamecocks. As for conference play, Wisconsin and Michigan welcomed us to the Big Ten with humiliating losses and we finished with a mediocre 5-3 conference record.
+```{r, echo = FALSE, results = 'asis'}
+plot(df.11)
+```
+
+In the fifth season under Pelini, overall, the Huskers went 10-4. In non-conference play, UCLA and Georgia gave the Huskers their 2 losses for a 3-2 record. As for conference-play, the Huskers went 7-2, losing to Wisconsin in the conference champion game, in quite the embarrassing fashion. Nice record, but not an impressive season when you break down two important non-conference losses and a trampling from an unranked Badgers team. 
+```{r, echo = FALSE, results = 'asis'}
+plot(df.12)
+```
+
+In Pelini's second to last season, the Huskers finished with a 9-4 record, in what I believe was their easiest scheduled season (no OSU, WIS, or MICH). In non-conference play, the Huskers went 4-1, losing to UCLA for the second straight year in a row, but winning their bowl game in a rematch against the Georgia Bulldogs (mind you, Aaron Murray sat out this game). In conference play, the Huskers went 5-3, losing to Minnesota, Michigan State, and Iowa (gasp!). Another mediocre season masked by another above average season. 
+```{r, echo = FALSE, results = 'asis'}
+plot(df.13)
+```
+
+In Pelini's last season, the Huskers finished 9-4, again. In non-conference play, we beat Miami after drinking the koolaid from the Husker's domination during the 90's, but lost the bowl game to USC. In conference play, the Huskers went 5-3, where consecutive losses to Wisconsin (in embarrassing fashion, yet again) and Minnesota did not help Bo Pelini's chances of staying for an 8th season. *Note: Pelini did not coach the bowl game against USC.* 
+```{r, echo = FALSE, results = 'asis'}
+plot(df.14)
+```
+
+That was a lot of information to absorb so in order to digest it, let's put it in a fancy table. Although in the above graphics, I only specified non-conference and conference games, I've added additional information, such as bowl games, conference championship, non-conference FBS (which includes bowl games) against opponents such as Virginia Tech, UCLA, Washington, and Miami, and lastly, non-conference fillers, which are the three games in the beginning of the season that pad the resume and prepare teams for conference play. 
+
+```{r, echo = FALSE, message = FALSE, warnings = FALSE, results = 'asis'}
+tabl <- "
+| Setting                    | Record        |
+|----------------------------|:-------------:|
+| Non-Conference (NC)        | 27 - 6 (79%)  |
+| Conference                 | 39 - 21 (65%) |
+| Bowl Games                 | 3 - 3 (50%)   |
+| Conference Championship    | 0 - 3 (0%)    |
+| NC FBS                     | 6 - 7 (46%)   |
+| NC Fillers                 | 21 - 0 (100%) |
+"
+cat(tabl) # output the table in a format good for HTML/PDF/docx conversion
+```
+
+Now, after 7 seasons of one coach, you start to lose track of the wins and losses and settle for 9-4 or 10-4 records season after season. How many of us would settle for another one of those next season? Well, after looking at the Husker's record when broken down into bowl games, conference championships, non-conference FBS games, it is really quite mediocre and underachieving. I hope this was helpful!
+
+
+[id]: http://espn.go.com/college-football/story/_/id/11958376/nebraska-cornhuskers-fire-bo-pelini
+[id1]: https://github.com/shv38339/huskers
