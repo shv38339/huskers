@@ -2,7 +2,9 @@
 title: "Bo Pelini, 67-27. Does it tell the whole story?"
 author: "Steele H. Valenzuela"
 date: "April 19, 2015"
-output: html_document
+output: 
+  html_document:
+    keep_md: true
 ---
 
 ```{r, echo = FALSE, message = FALSE}
@@ -112,7 +114,7 @@ df.13 <- gvisBubbleChart(pelini.13, idvar = "abbrvs",
                            hAxes = "[{title: '2013 Regular Season'}]"))
 
 df.14 <- gvisBubbleChart(pelini.14, idvar = "abbrvs", 
-                         xvar = "week", yvar = "ptdiff", 
+                         xvar = "week", yvar = "ptdiff", sizevar = "n.pts", 
                          colorvar = "confplay", # sizevar = "n.pts", 
                          options = list(
                            width = 1000, height = 400,
@@ -133,7 +135,7 @@ Although it is easier to share the bigger story, let's examine each of Pelini's 
   * Point Differential - Above 0 indicates a win and below 0 indicates a loss
   * Conference and Non-Conference play - straightforward
   
-I code in the statistical computing language `R`, which has many great packages, such `googleVis`, which has aided me in creating these interactive bubble charts. If you scroll over the team abbreviation, you'll see the **week**, **point differential**, and if the game was in **conference** or **non-conference** play. You may harangue me in the comment section about my choice of visuals, but keep in mind, I tried to keep it *simple*.
+I code in the statistical computing language `R`, which has many great packages, such as `googleVis`, which has aided me in creating these interactive bubble charts. If you scroll over the team abbreviation, you'll see the **week**, **point differential**, and if the game was in **conference** or **non-conference** play. You may harangue me in the comment section about my choice of visuals, but keep in mind, I tried to keep it *simple*.
     
 If you'd like to take a look at the data, it's at my [GitHub][id1] repository. I don't think I've made any errors, but hey, that's what you readers are there for. If you see any, shoot me an email or simply fork, pull, and push a request. The article may be repetitive, but I feel that this is absolutely important in determining what Mike Riley must deliver on what Bo Pelini could not.
 
@@ -167,7 +169,7 @@ In Pelini's second to last season, the Huskers finished with a 9-4 record, in wh
 plot(df.13)
 ```
 
-In Pelini's last season, the Huskers finished 9-4, again. In non-conference play, we beat Miami after drinking the koolaid from the Husker's domination during the 90's, but lost the bowl game to USC. In conference play, the Huskers went 5-3, where consecutive losses to Wisconsin (in embarrassing fashion, yet again) and Minnesota did not help Bo Pelini's chances of staying for an 8th season. *Note: Pelini did not coach the bowl game against USC.* 
+In Pelini's last season, the Huskers finished 9-4, again. In non-conference play, we beat Miami after drinking the koolaid from the Husker's domination during the 90's, but lost the bowl game to USC. In conference play, the Huskers went 5-3, where consecutive losses to Wisconsin (in embarrassing fashion, yet again) and Minnesota did not help Bo Pelini's chances of staying for an 8th season. Also, please note, this graphic is different than the others as I added a variable to alter the size of the bubbles in relation to the number of points scored by Nebraska during that game. The larger the bubble, the more points scored by the Huskers. *Note: Pelini did not coach the bowl game against USC.* 
 ```{r, echo = FALSE, results = 'asis'}
 plot(df.14)
 ```
@@ -178,17 +180,17 @@ That was a lot of information to absorb so in order to digest it, let's put it i
 tabl <- "
 | Setting                    | Record        |
 |----------------------------|:-------------:|
-| Non-Conference (NC)        | 27 - 6 (79%)  |
+| Non-Conference (NC)        | 28 - 6 (82%)  |
 | Conference                 | 39 - 21 (65%) |
-| Bowl Games                 | 3 - 3 (50%)   |
+| Bowl Games                 | 4 - 3 (57%)   |
 | Conference Championship    | 0 - 3 (0%)    |
-| NC FBS                     | 6 - 7 (46%)   |
+| NC FBS                     | 7 - 7 (50%)   |
 | NC Fillers                 | 21 - 0 (100%) |
 "
 cat(tabl) # output the table in a format good for HTML/PDF/docx conversion
 ```
 
-Now, after 7 seasons of one coach, you start to lose track of the wins and losses and settle for 9-4 or 10-4 records season after season. How many of us would settle for another one of those next season? Well, after looking at the Husker's record when broken down into bowl games, conference championships, non-conference FBS games, it is really quite mediocre and underachieving. I hope this was helpful!
+Now, after 7 seasons of one coach, you start to lose track of the wins and losses and settle for 9-4 and 10-4 records season after season. How many of us would settle for another one? Well, after looking at the Husker's record when broken down into bowl games, conference championships, non-conference FBS games, it is really quite mediocre and underachieving. I hope this was helpful! (*Note again: the above table includes the bowl game stint from 2001 against Michigan St.*)
 
 
 [id]: http://espn.go.com/college-football/story/_/id/11958376/nebraska-cornhuskers-fire-bo-pelini
